@@ -1,10 +1,18 @@
 module.exports = function bmwAudi(inventory){
-    let BMWAudis = [];
-    for (index =0; index< inventory.length; index++){
-         if (inventory[index].car_make === 'BMW' || inventory[index].car_make === 'Audi' ){
-             BMWAudis.push(inventory[index])
-         }
+    if(inventory === undefined){
+        return "Undefined array";
     }
-    return BMWAudis;
+    else if (inventory.length === 0){
+        return "Empty array";
+    }
+    else{
+        let BMWAudis = [];
+        for (index =0; index< inventory.length; index++){
+            if (inventory[index].car_make === 'BMW' || inventory[index].car_make === 'Audi' ){
+                BMWAudis.push(inventory[index])
+            }
+        }
+        return BMWAudis;
+    }
 }
         

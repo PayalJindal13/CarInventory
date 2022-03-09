@@ -1,9 +1,17 @@
 
 
 module.exports = function carYears(inventory){
-    let Years = [];
-    for (index =0; index< inventory.length; index++){
-      Years.push(inventory[index].car_year)
+    if(inventory === undefined){
+        return "Undefined array";
     }
-    return Years;
+    else if (inventory.length === 0){
+        return "Empty array";
+    }
+    else {
+        let Years = [];
+        for (index =0; index< inventory.length; index++){
+            Years.push(inventory[index].car_year)
+        }
+        return Years;
+    }
 }
