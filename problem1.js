@@ -1,18 +1,11 @@
 
 
-module.exports = function car33(inventory){
-    if(inventory === undefined){
-        return "Undefined array";
-    }
-    else if (inventory.length === 0){
-        return "Empty array";
-    }
-    else{
+module.exports = function carById(inventory){
+    if(inventory){
         for (let index = 0; index < inventory.length; index++){
-            if (inventory[index].id === 33){
-                return inventory[index];     
-            }
+            if (inventory[index].id === 33) return `Car is a ${inventory[index].car_year} ${inventory[index].car_make} ${inventory[index].car_model}`;     
         }   
     }       
+    return {};
 }
 
